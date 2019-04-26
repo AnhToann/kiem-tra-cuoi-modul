@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-4</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000px" height="500px" style="border:1px solid #000000"></canvas>
+<script>
+    function Rectangle(x, y, width, height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
+    var rectangle = new Rectangle(10, 10, 200, 100);
+
+    function createRectangle() {
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.beginPath();
+        ctx.fillRect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
+    }
+
+    createRectangle();
+</script>
+</body>
+</html>
